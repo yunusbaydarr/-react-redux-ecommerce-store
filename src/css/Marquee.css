@@ -1,0 +1,54 @@
+/* App.css */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(10%); /* Başlangıç: En solda */
+  }
+  100% {
+    /* Metni kendi genişliğinin tamamı kadar sola kaydır. */
+    /* Bu, marquee-content'in içindeki TÜM TEKRAR EDEN metinlerin bir turunu tamamlamış olur. */
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  max-width: 1200px; /* Kart genişliği kadar */
+  height: 80px;
+  overflow: hidden; /* Taşmayı gizle */
+  /* white-space: nowrap; - Artık .marquee-content'e taşınacak */
+  box-sizing: border-box;
+  margin: 20px auto;
+  background-color: #faf8f8;
+  display: flex;
+  align-items: center; /* Yazıyı dikeyde ortala */
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0 10px; /* Kenarlardan boşluk */
+}
+
+.marquee-content {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #ff00cc, #02753e, #0026ff, #e48731, #ff00cc, #02753e, #0026ff, #e48731, #ff00cc, #02753e, #0026ff, #e48731, #ff00cc, #02753e, #0026ff, #e48731, #ff00cc, #02753e, #0026ff, #e48731);
+  background-size: 300% 100%;
+  animation: marquee 85s linear infinite, gradientShift 2s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+/* Kayan metin parçaları arasındaki stil (JSX'teki <span>'ler için) */
+.marquee-content span {
+  display: inline-block; /* Her bir metin parçasının doğru şekilde yan yana durmasını sağlar */
+  padding-right: 50px; /* Yazılar arasında boşluk bırakır */
+  /* Bu boşluğu ayarlayarak "birkaç boşluk geçtikten sonra direkt mesajın en baştan yazılması" hissini verebilirsiniz */
+}
+
+/* Animasyon durduğunda veya hover durumunda */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
