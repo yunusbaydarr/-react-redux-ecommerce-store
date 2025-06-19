@@ -41,7 +41,7 @@ React ve Redux Toolkit ile geliştirilmiş, duyarlı bir e-ticaret arayüz uygul
 
 1.  **Projeyi klonlayın:**
     ```bash
-    git clone https://github.com/yunusbaydarr/-react-redux-ecommerce-store.git
+    git clone https://github.com/yunusbaydarr/react-redux-ecommerce-store.git
     ```
 
 2.  **Proje dizinine gidin:**
