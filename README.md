@@ -43,7 +43,7 @@ To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/senin-kullanici-adin/react-redux-ecommerce-store.git
+    git clone https://github.com/yunusbaydarr/-react-redux-ecommerce-store.git
     ```
 
 2.  **Navigate to the project directory:**
